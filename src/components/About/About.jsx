@@ -1,10 +1,14 @@
+import { Helmet } from "react-helmet-async";
 import SectionTitle from "../Shared/SectionTitle";
 
 
 const About = () => {
     return (
         <div>
-                        <SectionTitle heading="About" ></SectionTitle>
+            <Helmet>
+                <title>TaskFlow | About</title>
+            </Helmet>
+            <SectionTitle heading="About" ></SectionTitle>
         </div>
     );
 };

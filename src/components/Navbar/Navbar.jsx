@@ -49,6 +49,30 @@ const Navbar = () => {
                 Contact
             </NavLink>
         </li>
+        <li>
+            <NavLink
+                to="/dashboard/task"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "text-[#173bb7] border-b-2 border-[#173bb7] rounded-none font-semibold" : "font-semibold rounded-none"}>
+                My Task
+            </NavLink>
+        </li>
+        <li>
+            <NavLink
+                to="/dashboard/assignTask"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "text-[#173bb7] border-b-2 border-[#173bb7] rounded-none font-semibold" : "font-semibold rounded-none"}>
+                Assign Tasks
+            </NavLink>
+        </li>
+        <li>
+            <NavLink
+                to="/dashboard/todo"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "text-[#173bb7] border-b-2 border-[#173bb7] rounded-none font-semibold" : "font-semibold rounded-none"}>
+                To-Do
+            </NavLink>
+        </li>
 
 
     </>

@@ -6,6 +6,10 @@ import SignIn from "../pages/SignIn/SignIn";
 import SignUp from "../pages/SignUp/SignUp";
 import About from "../components/About/About";
 import Contact from "../components/Contact/Contact";
+import Dashboard from "../Layout/Dashboard";
+import Task from "../pages/Dashboard/Task/Task";
+import AssignTask from "../pages/Dashboard/AssignTask/AssignTask";
+import Todo from "../pages/Dashboard/ToDo/Todo";
 
 const router = createBrowserRouter([
     {
@@ -35,5 +39,23 @@ const router = createBrowserRouter([
         path: '/signUp',
         element: <SignUp></SignUp>
     },
+    {
+      path:'dashboard',
+      element:<Dashboard></Dashboard>,
+      children:[
+        {
+          path:'task',
+          element:<Task></Task>
+        },
+        {
+          path:'assignTask',
+          element:<AssignTask></AssignTask>
+        },
+        {
+          path:'todo',
+          element:<Todo></Todo>
+        }
+      ]
+    }
   ]);
   export default router;
