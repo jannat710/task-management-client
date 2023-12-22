@@ -15,8 +15,8 @@ import { FreeMode, Pagination } from 'swiper/modules';
 
 const UsersCategory = () => {
     return (
-        <div className='py-10'>
-            <h1 className='text-4xl font-semibold pb-5'>Discover the Diverse Users <br></br>of Our Website!</h1>
+        <div className=' py-40 md:py-20 lg:py-10 '>
+            <h1 className='text-sm md:text-2xl lg:text-4xl font-semibold pb-5'>Discover the Diverse Users <br></br>of Our Website!</h1>
             <Swiper
         slidesPerView={3}
         spaceBetween={30}
@@ -29,23 +29,23 @@ const UsersCategory = () => {
       >
         <SwiperSlide>
             <img src={p1} alt="" />
-            <h3 className='text-4xl uppercase text-center text-white -mt-16'>Bankers</h3>
+            <h3 className=' text-sm md:text-2xl lg:text-4xl uppercase text-center text-white -mt-16'>Bankers</h3>
             </SwiperSlide>
         <SwiperSlide>
             <img src={p2} alt="" />
-            <h3 className='text-4xl uppercase text-center text-white -mt-16'>Corporate</h3>
+            <h3 className=' text-sm md:text-2xl lg:text-4xl uppercase text-center text-white -mt-16'>Corporate</h3>
             </SwiperSlide>
         <SwiperSlide>
             <img src={p3} alt="" />
-            <h3 className='text-4xl uppercase text-center text-white -mt-16'>Developers</h3>
+            <h3 className=' text-sm md:text-2xl lg:text-4xl uppercase text-center text-white -mt-16'>Developers</h3>
         </SwiperSlide>
         <SwiperSlide>
             <img src={p4} alt="" />
-            <h3 className='text-4xl uppercase text-center text-white -mt-16'>Proffessionals</h3>
+            <h3 className=' text-sm md:text-2xl lg:text-4xl uppercase text-center text-white -mt-16'>Proffessionals</h3>
             </SwiperSlide>
         <SwiperSlide>
             <img src={p5} alt="" />
-            <h3 className='text-4xl uppercase text-center text-white -mt-16'>Teachers</h3>
+            <h3 className=' text-sm md:text-2xl lg:text-4xl uppercase text-center text-white -mt-16'>Teachers</h3>
             </SwiperSlide>
       </Swiper>
         </div>

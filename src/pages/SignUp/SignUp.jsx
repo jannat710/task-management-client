@@ -22,7 +22,7 @@ const SignUp = () => {
         })
 
     //Google
-    const handleGoogleLogin = () => {
+    const handleGoogleSignIn = () => {
         googleSignIn()
             .then(result => {
                 console.log(result.user);
@@ -88,7 +88,7 @@ const SignUp = () => {
                                 <span className="font-bold text-[#173bb7]"> {text}</span><Cursor />
                             </h1>
                             <div className="form-control">
-                                <button onClick={handleGoogleLogin} className="btn rounded-3xl bg-black text-white">
+                                <button onClick={handleGoogleSignIn} className="btn rounded-3xl bg-black text-white">
                                     <img className="h-8" src={Google} alt="" />
                                     Sign in with Google
                                 </button>
