@@ -2,8 +2,8 @@
 
 const SectionTitle = ({heading}) => {
     return (
-        <div className="text-black mx-auto text-center md:w-4/12 my-8">
-        <h3 className="text-3xl uppercase border-black border-y-4 py-4">{heading}</h3>
+        <div className="text-[#173bb7] divider divider-neutral mx-auto text-center md:w-6/12 my-8">
+        <h3 className="text-3xl uppercase font-semibold">{heading}</h3>
     </div>
     );
 };

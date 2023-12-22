@@ -1,7 +1,29 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import logo from '../../assets/nav-logo.png'
+import useAuth from '../../hooks/useAuth';
+import Swal from 'sweetalert2';
 
 const Navbar = () => {
+    const { user, logOut } = useAuth()
+    const navigate = useNavigate();
+    //Logout
+    const handleLogOut = () => {
+        logOut()
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+
+
+            })
+            .catch(error => {
+                const user = error.user;
+                console.log(user)
+                Swal.fire("Success!", "Successfully logout user", "success")
+                navigate('/');
+            }
+
+            );
+    }
     const navlink = <>
         <li>
             <NavLink
@@ -27,6 +49,7 @@ const Navbar = () => {
                 Contact
             </NavLink>
         </li>
+
     </>
     return (
         <div>
@@ -48,7 +71,12 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to='/signIn'><a className="btn text-[#173bb7] border-2 border-[#173bb7] rounded-none">Let&apos;s Explore</a></Link>
+                    
+                    {
+                        user ? <>{/* <span>{user?.displayName}</span> */}
+                        <Link to="/dashboard/myProfile"><img className="h-6 w-6 rounded-full m-2" src={user?.photoURL} alt="" /></Link>
+                        <button onClick={handleLogOut} className="font-semibold text-sm">Logout</button></> : <><Link to='/signIn'><a className="btn text-[#173bb7] border-2 border-[#173bb7] rounded-none">Let&apos;s Explore</a></Link></>
+                    }
                 </div>
             </div>
         </div>
