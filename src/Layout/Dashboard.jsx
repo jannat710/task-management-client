@@ -1,5 +1,7 @@
-import { FaEnvelope, FaHome, FaPhone } from "react-icons/fa";
+import { FaEnvelope, FaHome, FaPhone,  FaTasks } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
+import { MdOutlineAssignmentTurnedIn } from "react-icons/md";
+import { FaAnglesRight } from "react-icons/fa6";
 
 
 const Dashboard = () => {
@@ -7,9 +9,9 @@ const Dashboard = () => {
         <div className="flex">
             <div className="w-64 min-h-screen bg-[#173bb7] text-white">
                 <ul className="menu p-4">
-                    <li><NavLink to='dashboard/task'>All Tasks</NavLink></li>
-                    <li><NavLink to='dashboard/assignTask'>Assign Task</NavLink></li>
-                    <li><NavLink to='dashboard/todo'>To-Do List</NavLink></li>
+                    <li><NavLink to='/dashboard/task'><FaTasks></FaTasks>All Tasks</NavLink></li>
+                    <li><NavLink to='/dashboard/assignTask'><MdOutlineAssignmentTurnedIn />Assign Task</NavLink></li>
+                    <li><NavLink to='/dashboard/todo'><FaAnglesRight />To-Do List</NavLink></li>
 
                     {/* shared nav link */}
                     <div className="divider divide-red-50">Or Back To</div>
