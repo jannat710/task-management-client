@@ -49,6 +49,9 @@ const Navbar = () => {
                 Contact
             </NavLink>
         </li>
+
+        {
+            user?.email && (<div className='flex'>
         <li>
             <NavLink
                 to="/dashboard/task"
@@ -67,12 +70,22 @@ const Navbar = () => {
         </li>
         <li>
             <NavLink
+                to="/dashboard"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "text-[#173bb7] border-b-2 border-[#173bb7] rounded-none font-semibold" : "font-semibold rounded-none"}>
+                Dashboard
+            </NavLink>
+        </li>
+        <li>
+            <NavLink
                 to="/dashboard/todo"
                 className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "text-[#173bb7] border-b-2 border-[#173bb7] rounded-none font-semibold" : "font-semibold rounded-none"}>
                 To-Do
             </NavLink>
         </li>
+            </div>)
+        }
 
 
     </>

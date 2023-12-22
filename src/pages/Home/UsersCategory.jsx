@@ -15,7 +15,7 @@ import { FreeMode, Pagination } from 'swiper/modules';
 
 const UsersCategory = () => {
     return (
-        <div className=' py-40 md:py-20 lg:py-10 '>
+        <div className=' py-40 md:py-40 lg:py-10 'data-aos="fade-up">
             <h1 className='text-sm md:text-2xl lg:text-4xl font-semibold pb-5'>Discover the Diverse Users <br></br>of Our Website!</h1>
             <Swiper
         slidesPerView={3}
